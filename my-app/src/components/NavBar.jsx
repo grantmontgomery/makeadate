@@ -6,17 +6,22 @@ class NavBar extends Component {
     styles = {
         height: "50px",
         width: "100%",
-        backgroundColor: "FFFFFF",
+        // backgroundColor: "FFFFFF",
+        backgroundColor: "white",
+        zIndex: "1",
         margin: "0px",
-        opacity: "0.5",
-        filter: "alpha(opacity=50)"
+        background: "rgba(0, 0, 0, 0.2)",
+        display: "inline-block",
+        right: "5%"
+        
+        // filter: "alpha(opacity=50)"
         
     }
     render() { 
         return (
             <React.Fragment>
                 <nav style={this.styles}>
-                
+                    <a href=""className="logo">make a date</a>
                 </nav>
             </React.Fragment>
           );

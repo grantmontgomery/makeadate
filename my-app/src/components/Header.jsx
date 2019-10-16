@@ -11,22 +11,23 @@ import ThatsPicker from "./ThatsPicker.jsx"
 class Header extends Component {
     state = {  }
     styles = {
-        // height: "100vh",
+        height: "100%",
         width: "100%",
+        allignContent: "center",
         // background: "url({Couple_1})",
         // bacgkroundSize: "auto 100%"
         // zIndex: "-1"
+        
     }
     render() { 
         return (
             <header style={this.styles}>
                 
-               <div>
-                   <span style={{color: "white"}}>Make a date that's</span>
-                    <ThatsPicker>
-
-                    </ThatsPicker>
-
+               <div className="easypicker">
+                  
+                   <ThatsPicker>
+                       </ThatsPicker>
+                       
                 </div>
 
 

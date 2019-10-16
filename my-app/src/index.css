@@ -12,4 +12,7 @@ body{
 .background_image{
     background-image: url("./components/pictures/coupleondate4.jpg");
     background-size: 100% auto;
+    background-repeat: no-repeat;
+    z-index: -1;
+    height: 100vh;
 }

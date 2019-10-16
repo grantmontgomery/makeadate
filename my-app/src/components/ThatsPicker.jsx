@@ -44,7 +44,8 @@ class ThatsPicker extends Component {
         return (
             <React.Fragment>
                 {/* {this.random()} */}
-                <form action="" >
+               <span>
+               <form action="" >
                 <input list="selectors" name="..." placeholder={this.state.value}/>
                     <datalist id="selectors">
                         {
@@ -55,6 +56,7 @@ class ThatsPicker extends Component {
                         }
                     </datalist>
                     </form>
+                </span> 
 
             </React.Fragment>
           );

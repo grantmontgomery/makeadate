@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import NavBar from './components/NavBar';
 // import Footer from './components/Footer';
 import Header from "./components/Header"
-import ""
+import "./index.css"
+
 
 
 class App extends Component {
@@ -13,8 +14,7 @@ class App extends Component {
     }
     render() { 
         return (
-            <React.Fragment>
-                <div style={this.styles}>
+                <div className="background_image">
                 <NavBar>
                 </NavBar>
 
@@ -25,13 +25,8 @@ class App extends Component {
                 
                 
                 
-                <h1>Hello World!</h1>
 
-{/*                 
-                <Footer>
-                </Footer> */}
 
-            </React.Fragment> 
          );
     }
 }

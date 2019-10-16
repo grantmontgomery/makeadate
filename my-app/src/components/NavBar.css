@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat+Alternates|Poiret+One&display=swap');
+.logo{
+    font-family: 'Poiret One', cursive;
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    left: 5%;
+}
