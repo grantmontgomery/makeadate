@@ -8,3 +8,8 @@ body{
     padding: 0;
     margin: 0;
 }
+
+.background_image{
+    background-image: url("./components/pictures/coupleondate4.jpg");
+    background-size: 100% auto;
+}

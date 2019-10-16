@@ -6,8 +6,11 @@ class NavBar extends Component {
     styles = {
         height: "50px",
         width: "100%",
-        backgroundColor: "black",
-        margin: "0px"
+        backgroundColor: "FFFFFF",
+        margin: "0px",
+        opacity: "0.5",
+        filter: "alpha(opacity=50)"
+        
     }
     render() { 
         return (

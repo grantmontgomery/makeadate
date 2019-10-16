@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import "./Header.css"
-import ScrollablePicker from "./ScrollablePicker.jsx"
+// import Picker from "./ScrollablePicker.jsx"
+import ThatsPicker from "./ThatsPicker.jsx"
+// import Couple_1 from "./pictures/coupleondate.jpg"
 
 
 
@@ -9,18 +11,22 @@ import ScrollablePicker from "./ScrollablePicker.jsx"
 class Header extends Component {
     state = {  }
     styles = {
-        height: "40vh"
+        // height: "100vh",
+        width: "100%",
+        // background: "url({Couple_1})",
+        // bacgkroundSize: "auto 100%"
+        // zIndex: "-1"
     }
     render() { 
         return (
             <header style={this.styles}>
                 
                <div>
-                   <span>"Make a date that's"</span>
-                    <ScrollablePicker>
+                   <span style={{color: "white"}}>Make a date that's</span>
+                    <ThatsPicker>
 
-                    </ScrollablePicker>
-                
+                    </ThatsPicker>
+
                 </div>
 
 
