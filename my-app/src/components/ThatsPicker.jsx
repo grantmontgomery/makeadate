@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./ThatsPicker.css"
 
 
 
@@ -18,7 +19,9 @@ class ThatsPicker extends Component {
 
       }
 
-      consolelog 
+    updateSearch(value) {
+        this.setState(this.state.value = value)
+    } 
     random() {
         setInterval(() => {
             // let random = ""
@@ -45,17 +48,22 @@ class ThatsPicker extends Component {
             <React.Fragment>
                 {/* {this.random()} */}
                <span>
-               <form action="" >
-                <input list="selectors" name="..." placeholder={this.state.value}/>
-                    <datalist id="selectors">
+        
+                <input list="selectors" name="..." 
+                className="searchbar"
+                placeholder={this.state.value}
+                value={this.state.value}
+                onChange={e => this.updateSearch(e.target.value)}
+                />
+                    <datalist id="selectors" className="searchbar">
                         {
                             this.state.selectors.map(selector =>
-                                <option id={selector.id} value={selector.value}>
+                                <option id={selector.id} value={selector.value} className="searchbar">
 
                                 </option>)
                         }
                     </datalist>
-                    </form>
+            
                 </span> 
 
             </React.Fragment>

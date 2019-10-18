@@ -7,10 +7,9 @@ class NavBar extends Component {
         height: "50px",
         width: "100%",
         // backgroundColor: "FFFFFF",
-        backgroundColor: "white",
         zIndex: "1",
         margin: "0px",
-        background: "rgba(0, 0, 0, 0.2)",
+        background: "rgba(63, 63, 63, 0.2)",
         display: "inline-block",
         right: "5%"
         
