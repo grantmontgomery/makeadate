@@ -22,21 +22,21 @@ class ThatsPicker extends Component {
     updateSearch(value) {
         this.setState(this.state.value = value)
     } 
-    random() {
-        setInterval(() => {
-            // let random = ""
-            // for(let i = 0; i < this.state.selectors.length; i++){
-            //     random = this.state.selectors[i].value
-            // }
-            let index = Math.floor(Math.random() * this.state.selectors.length)
-            let random_attribute = this.state.selectors[index].value
-            // this.setState({ value: random_attribute})
-            this.setState({value: random_attribute})
+    // random() {
+    //     setInterval(() => {
+    //         let random = ""
+    //         for(let i = 0; i < this.state.selectors.length; i++){
+    //             random = this.state.selectors[i].value
+    //         }
+    //         let index = Math.floor(Math.random() * this.state.selectors.length)
+    //         let random_attribute = this.state.selectors[index].value
+    //         this.setState({ value: random_attribute})
+    //         this.setState({value: random_attribute})
 
             
-        }, 3500);
+    //     }, 3500);
 
-    }
+    // }
 
     // stoprandom() {
     //     this.setState({value: ""})

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import "./Header.css"
 // import Picker from "./ScrollablePicker.jsx"
-import ThatsPicker from "./ThatsPicker.jsx"
+import {ThatsPicker} from "../ThatsPicker"
 // import Couple_1 from "./pictures/coupleondate.jpg"
 
 
