@@ -10,27 +10,15 @@ import {ThatsPicker} from "../ThatsPicker"
 
 class Header extends Component {
     state = {  }
-    styles = {
-        height: "100%",
-        width: "100%",
-        allignContent: "center",
-        // background: "url({Couple_1})",
-        // bacgkroundSize: "auto 100%"
-        // zIndex: "-1"
-        
-    }
+
     render() { 
         return (
-            <header style={this.styles}>
+            <header className="main-header">
                 
-               <div className="easypicker">
-                  
+               <span className="headline">Make a date that's</span>
                    <ThatsPicker>
                        </ThatsPicker>
-                       
-                </div>
-
-
+        
             </header>
           );
     }

@@ -9,3 +9,19 @@
     /* left: 50%;
     right: 50%; */
 }
+
+.main-header{
+    margin-top: 35px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.container{
+
+}
+
+.col-4{
+    width: 25%;
+    margin: 0;
+    
+}

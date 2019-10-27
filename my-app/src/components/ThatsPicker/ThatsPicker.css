@@ -1,5 +1,14 @@
-.searchbar{
-    background: rgba(127, 127, 127, 0.4);
-    border-radius: 10%;
-    color: white;
+.thats-picker-form{
+    display: flex;
+    align-items: center;
+    /* border: solid black 1px; */
+    border-radius: 8px;
+    background: rgba(100,100,100, 0.4)
+}
+
+.thats-picker-input{
+    background-color: transparent;
+    color: lightgray;
+    border: 0;
+    margin: 0 10px;
 }
