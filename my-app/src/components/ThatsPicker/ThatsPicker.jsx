@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "./ThatsPicker.css"
 import {SearchIcon} from "../../icons"
+import { thisTypeAnnotation } from '@babel/types';
 
 
 
@@ -20,14 +21,25 @@ class ThatsPicker extends Component {
         ]
 
       }
+    inputChange(event){
+        this.setState({value: event.target.value})
+    }
+    // random = () => {
+    //     setTimeout(
 
+    //         this.setState({value: this.state.selectors[] }), 2000)
+        
+    // }
 
     render() {
         return (
             <div className="thats-picker-container">
                 <form className="thats-picker-form">
                     <SearchIcon/>
-                    <input type="text" value={this.state.selectors[0].value} className="thats-picker-input"/>
+                    <input type="text" value={this.state.value} 
+                    className="thats-picker-input"
+                    onChange={e => this.inputChange(e)}
+                    />
                 </form>
 
             </div>
