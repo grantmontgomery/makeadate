@@ -3,7 +3,9 @@ import "./Scheduler.css"
 
 
 class Scheduler extends Component {
-    state = {  }
+    constructor(props){
+        super(props)
+    }
     render() { 
         return ( 
             <div className="scheduler" style={{border: "1px solid white"}}>
