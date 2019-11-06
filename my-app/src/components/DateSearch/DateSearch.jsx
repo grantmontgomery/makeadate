@@ -19,6 +19,14 @@ class DateSearch extends Component {
                     <input type="text"
                     value={this.state.value}
                     onChange={e => this.updateInput(e)}/>
+                    <br/>
+                    <select name="date" id="1" style={{width: "100px"}}>
+                        <option value="tonight"></option>
+                        <option value="tomorrow"></option>
+                        <option value="this weekend"></option>
+                        <option value="next week"></option>
+                        <option value="saturday"></option>
+                    </select>
                 </form>
             </div>
           );
