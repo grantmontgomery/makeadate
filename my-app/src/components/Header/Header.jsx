@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import "./Header.css"
 // import Picker from "./ScrollablePicker.jsx"
-import {ThatsPicker} from "../ThatsPicker"
 // import Couple_1 from "./pictures/coupleondate.jpg"
+import {DateSearch} from "../DateSearch"
 
 
 
@@ -14,11 +14,9 @@ class Header extends Component {
     render() { 
         return (
             <header className="main-header">
-                
-               <span className="headline">Make a date that's</span>
-                   <ThatsPicker>
-                       </ThatsPicker>
-        
+                <DateSearch>
+
+                </DateSearch>
             </header>
           );
     }
