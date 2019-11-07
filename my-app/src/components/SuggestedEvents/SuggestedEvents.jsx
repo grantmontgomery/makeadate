@@ -9,7 +9,7 @@ class SuggestedEvents extends Component {
     }
     render() { 
         return (
-            <div style={{height: "500px", position: "relative"}}>
+            <div>
                 <ul>
 
                 </ul>

@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import {Scheduler} from "../Scheduler"
+import {City} from "../City"
+import {Login} from "../Login"
 import "./NavBar.css"
 
 class NavBar extends Component {
@@ -22,7 +24,9 @@ class NavBar extends Component {
             <React.Fragment>
                 <nav style={this.styles}>
                     <a href=""className="logo">make a date</a>
+                    <City></City>
                     <Scheduler></Scheduler>
+                    <Login></Login>
                 </nav>
             </React.Fragment>
           );

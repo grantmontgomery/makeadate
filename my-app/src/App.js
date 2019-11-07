@@ -3,7 +3,7 @@ import {NavBar} from "./components"
 import {Header} from "./components"
 // import Footer from './components/Footer';
 import "./index.css"
-import {SuggestedEvents} from "./components"
+import {EventsVenues} from "./components"
 
 
 
@@ -22,7 +22,7 @@ class App extends Component {
                 <Header>
                     
                 </Header>
-                <SuggestedEvents></SuggestedEvents>
+              <EventsVenues></EventsVenues>
                 </div>
                 
                 

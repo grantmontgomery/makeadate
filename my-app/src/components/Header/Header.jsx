@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import "./Header.css"
-// import Picker from "./ScrollablePicker.jsx"
-// import Couple_1 from "./pictures/coupleondate.jpg"
+
 import {DateSearch} from "../DateSearch"
 
 

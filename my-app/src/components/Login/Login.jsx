@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import "./Login.css"
 
 
 class Login extends Component {
@@ -6,7 +7,11 @@ class Login extends Component {
         super(props)
     }
     render() { 
-        return (  );
+        return (
+            <div className="login-box">
+                Login
+            </div>
+          );
     }
 }
  

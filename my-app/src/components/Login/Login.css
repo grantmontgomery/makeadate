@@ -1,0 +1,7 @@
+.login-box{
+    border: solid white 1px;
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    width: 100px;
+}
