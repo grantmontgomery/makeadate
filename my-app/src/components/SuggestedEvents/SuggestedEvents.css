@@ -1,0 +1,7 @@
+.suggested-events{
+    height: 200px;
+    border: solid black 1px;
+    position: relative;
+    top: 150px;
+    width: 80%;
+}

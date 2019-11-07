@@ -9,14 +9,27 @@ import "./index.css"
 
 
 class App extends Component {
-    state = {  }
+    constructor(props){
+        super(props)
+        this.backgroundRef = React.createRef()
+        this.state = {backgroundsize: 0}
+    }
+    componentDidMount(){
+        this.backgroundRef.current.addEventListener("load", this.giveClientHeight())
+        console.log(this.backgroundRef)
+    }
+
+    giveClientHeight = () => {
+        console.log(this.backgroundRef.current.ClientHeight)
+    }
+
     styles = {
         backgroundImage: "url('./components/pictures/coupleondate4.jpg')",
         bacgkroundSize: '100% auto'
     }
     render() { 
         return (
-                <div className="background_image">
+                <div className="background_image" ref={this.backgroundRef}>
                 <NavBar>
                 </NavBar>
 

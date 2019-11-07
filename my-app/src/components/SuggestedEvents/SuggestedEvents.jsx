@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { relative } from 'path';
-
+import "./SuggestedEvents.css"
 
 
 class SuggestedEvents extends Component {
@@ -9,10 +8,8 @@ class SuggestedEvents extends Component {
     }
     render() { 
         return (
-            <div>
-                <ul>
-
-                </ul>
+            <div className="suggested-events">
+                Suggested Events
             </div>
           );
     }
