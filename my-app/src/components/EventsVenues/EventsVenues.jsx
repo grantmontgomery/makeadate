@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Scheduler} from "../Scheduler"
 import "./EventsVenues.css"
 
 class EventsVenues extends Component {
@@ -7,8 +8,10 @@ class EventsVenues extends Component {
         return ( 
             <div className="eventsvenues-box">
                 Event Venues
+                <Scheduler></Scheduler>
             </div>
-         );
+          
+        )
     }
 }
  

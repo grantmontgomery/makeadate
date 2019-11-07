@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {Scheduler} from "../Scheduler"
 import {City} from "../City"
 import {Login} from "../Login"
 import "./NavBar.css"
@@ -14,7 +13,6 @@ class NavBar extends Component {
         margin: "0px",
         background: "rgba(63, 63, 63, 0.2)",
         display: "inline-block",
-        right: "5%"
         
         // filter: "alpha(opacity=50)"
         
@@ -25,7 +23,6 @@ class NavBar extends Component {
                 <nav style={this.styles}>
                     <a href=""className="logo">make a date</a>
                     <City></City>
-                    <Scheduler></Scheduler>
                     <Login></Login>
                 </nav>
             </React.Fragment>

@@ -1,6 +1,6 @@
 .date-search{
-    position: relative;
-    float: right;
+    position: absolute;
+    right: 5%;
     top: 100px;
     background: rgba(175, 175, 175, 0.4);
     height: 100px;

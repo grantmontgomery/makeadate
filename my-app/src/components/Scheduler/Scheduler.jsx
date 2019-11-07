@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./Scheduler.css"
+import "./Scheuduler1.svg"
 
 
 class Scheduler extends Component {
@@ -8,8 +9,9 @@ class Scheduler extends Component {
     }
     render() { 
         return ( 
-            <div className="scheduler" style={{border: "1px solid white"}}>
+            <div className="scheduler">
                 Scheduler
+                
             </div>
          );
     }

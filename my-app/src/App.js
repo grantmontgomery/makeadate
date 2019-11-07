@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import {NavBar} from "./components"
 import {Header} from "./components"
-// import Footer from './components/Footer';
-import "./index.css"
 import {EventsVenues} from "./components"
+import {Footer} from './components';
+import "./index.css"
+
 
 
 
@@ -23,6 +24,7 @@ class App extends Component {
                     
                 </Header>
               <EventsVenues></EventsVenues>
+              <Footer></Footer>
                 </div>
                 
                 
