@@ -5,9 +5,18 @@ class DateSearch extends Component {
     constructor(props){
         super(props)
         this.state={
-            value: ""
+            value: "",
+            eventCategories: []
         }
     }
+    // componentDidMount(){
+    //     fetch("https://www.eventbrite.com/oauth/authorize?response_type=token&client_id=XTQS3OCYMLHMTVXSLN&redirect_uri=localhost:3000", {
+    //         method: "GET",
+    //         parameters:{client_id: "XTQS3OCYMLHMTVXSLN",
+    //     redirect_uri: "localhost:3000"}
+    //     }).then((response) => console.log(response))
+    //     .catch(err => console.log(err.message))
+    // }
     updateInput(event){
         this.setState({value: event.target.value})
         console.log(this.state.value)
