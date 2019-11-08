@@ -25,7 +25,7 @@ class SuggestedVenues extends Component {
                 {venues.map(venue =>{
                     const {id, name, city, price} = venue
                     return(
-                        <Venue id={id} key={id} name={name} city={city} price={price}>
+                        <Venue id={id} key={id} name={name} city={city} price={price} addVenue={this.props.addpart}>
 
                         </Venue>
 

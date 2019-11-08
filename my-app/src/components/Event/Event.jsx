@@ -7,7 +7,7 @@ class Event extends Component {
         console.log(this.props)
     }
     render() { 
-        const {city, time, title} = this.props
+        const {city, time, title, addPart} = this.props
         return ( 
             <div  className="event">
                 <ul>
@@ -15,6 +15,10 @@ class Event extends Component {
                 <li>{city}</li>
                 <li>{time}</li>
                 </ul>
+                <br/>
+                <button onClick={event => this.addPart(event)}>
+                    +
+                </button>
             </div>
          );
     }

@@ -6,6 +6,7 @@ import "./Scheuduler1.svg"
 class Scheduler extends Component {
     constructor(props){
         super(props)
+        
     }
     render() { 
         return ( 

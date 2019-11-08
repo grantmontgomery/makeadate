@@ -26,7 +26,7 @@ class SuggestedEvents extends Component {
                 {events.map(event =>{
                     const{title, city, time, id} = event
                     return (
-                    <Event key={id} id={id} title={title} city={city} time={time}>
+                    <Event key={id} id={id} title={title} city={city} time={time} addPart={this.props.addpart}>
 
                     </Event>
                     )

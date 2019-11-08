@@ -3,3 +3,8 @@
     height: fit-content;
     border: 1px solid black;
 }
+
+.event button{
+    position: relative;
+    right: 0;
+}
