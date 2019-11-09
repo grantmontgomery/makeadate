@@ -3,9 +3,16 @@ import "./Venue.css"
 class Venue extends Component {
     constructor(props){
         super(props)
+        this.state = {
+            city: this.props.city,
+            name: this.props.name,
+            price: this.props.price,
+            type: this.props.type
+        }
     }
     render() { 
-        const {city, name, price, type, addVenue} = this.props
+        const {addVenue} = this.props
+        const {city, name, price, type} = this.state
         return (   
         <div  className="venue">
         <ul>
@@ -14,7 +21,7 @@ class Venue extends Component {
         <li>{price}</li>
         <li>{type}</li>
         </ul>
-        <button onClick = {event => addVenue(event)}>+</button>
+        <button onClick = {() => addVenue(this.state)}>+</button>
     </div> 
     );
     }

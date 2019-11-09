@@ -5,9 +5,16 @@ import { type } from 'os';
 class Event extends Component {
     constructor(props){
         super(props)
+        this.state={
+            city: this.props.city,
+            time: this.props.time,
+            title: this.props.title,
+            type: this.props.type
+        }
     }
     render() { 
-        const {city, time, title, type, addEvent} = this.props
+        const {city, time, title, type} = this.state
+        const {addEvent} = this.props
         return ( 
             <div  className="event">
                 <ul>
@@ -17,7 +24,7 @@ class Event extends Component {
                 <li>{type}</li>
                 </ul>
                 <br/>
-                <button onClick={event => addEvent(event)}>
+                <button onClick={() => addEvent(this.state)}>
                     +
                 </button>
             </div>

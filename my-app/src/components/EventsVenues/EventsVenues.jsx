@@ -12,13 +12,17 @@ class EventsVenues extends Component {
         }
 
     }
-    addEvent(event){
-        console.log(event.target)
+    addEvent(eventState){
+        console.log(eventState)
     }
-    addVenue(event){
-        console.log(event.target)
+    addVenue(venueState){
+        this.setState({
+            dateParts: [...this.state.dateParts, venueState]
+        })
+        console.log(this.state.dateParts)
     }
     render() { 
+        console.log(this.state.dateParts)
         return ( 
             <div className="eventsvenues-box">
                 Event Venues

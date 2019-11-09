@@ -9,9 +9,9 @@ class Scheduler extends Component {
         this.state = {
             dateParts: this.props.dateParts
         }
-        console.log(this.props)
     }
-    render() { 
+    render() {
+        console.log(this.state.dateParts) 
         return ( 
             <div className="scheduler">
                 Scheduler
