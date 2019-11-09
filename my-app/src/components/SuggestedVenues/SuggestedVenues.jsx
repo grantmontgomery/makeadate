@@ -10,9 +10,11 @@ class SuggestedVenues extends Component {
             venues:[
                 {
                     id: 1,
+                    type: "venue",
                     name: "sushiXpress",
                     city: "Los Angeles",
-                    price: "$"
+                    price: "$",
+                    addVenue: this.props.addVenue
                 }
             ]
         }
@@ -23,9 +25,9 @@ class SuggestedVenues extends Component {
             <div className="suggested-venues">
                 Suggested Venues
                 {venues.map(venue =>{
-                    const {id, name, city, price} = venue
+                    const {id, name, city, type, price, addVenue} = venue
                     return(
-                        <Venue id={id} key={id} name={name} city={city} price={price} addVenue={this.props.addpart}>
+                        <Venue id={id} key={id} type={type} name={name} city={city} price={price} addVenue={addVenue}>
 
                         </Venue>
 

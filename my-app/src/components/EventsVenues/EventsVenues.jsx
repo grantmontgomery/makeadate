@@ -7,18 +7,24 @@ import "./EventsVenues.css"
 class EventsVenues extends Component {
     constructor(props){
         super(props)
+        this.state={
+            dateParts: []
+        }
 
     }
-    addPart = function(event){
-        console.log(event.targe.value)
+    addEvent(event){
+        console.log(event.target)
+    }
+    addVenue(event){
+        console.log(event.target)
     }
     render() { 
         return ( 
             <div className="eventsvenues-box">
                 Event Venues
-                <Scheduler addPart={this.addPart}></Scheduler>
-                <SuggestedEvents addPart={this.addPart}></SuggestedEvents>
-                <SuggestedVenues addPart={this.addPart}></SuggestedVenues>
+                <Scheduler dateParts={this.state.dateParts}></Scheduler>
+                <SuggestedEvents addEvent={this.addEvent}></SuggestedEvents>
+                <SuggestedVenues addVenue={this.addVenue}></SuggestedVenues>
             </div>
           
         )

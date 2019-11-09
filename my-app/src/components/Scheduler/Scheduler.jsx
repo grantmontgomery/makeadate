@@ -6,7 +6,10 @@ import "./Scheuduler1.svg"
 class Scheduler extends Component {
     constructor(props){
         super(props)
-        
+        this.state = {
+            dateParts: this.props.dateParts
+        }
+        console.log(this.props)
     }
     render() { 
         return ( 
