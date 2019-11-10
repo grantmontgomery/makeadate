@@ -7,15 +7,19 @@ class Scheduler extends Component {
     constructor(props){
         super(props)
     }
+
+
     render() {
-        console.log(this.props.dateParts)
         return ( 
-            <div className="scheduler">
+            <Consumer>
+              {value => <div className="scheduler">
                 Scheduler
+                {value.dateParts}
                 <div className="notification-icon">
-                {this.props.dateParts.length}
                 </div>
-            </div>
+                </div>}
+            </Consumer>
+          
          );
     }
 }

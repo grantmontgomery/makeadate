@@ -34,12 +34,14 @@ class EventsVenues extends Component {
 
 
     render() { 
+        const {Provider, Consumer} = React.createContext()
         return ( 
             <div className="eventsvenues-box">
-                Event Venues
-                <Scheduler dateParts={this.state.dateParts}></Scheduler>
-                <SuggestedEvents addEvent={this.addEvent} removePart={this.removePart}></SuggestedEvents>
-                <SuggestedVenues addVenue={this.addVenue} removePart={this.removePart}></SuggestedVenues>
+                <Provider value={this.state.dateParts}>
+                <Scheduler></Scheduler>
+                <SuggestedEvents></SuggestedEvents>
+                <SuggestedVenues></SuggestedVenues>
+                </Provider>
             </div>
           
         )
