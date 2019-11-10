@@ -12,23 +12,34 @@ class EventsVenues extends Component {
         }
 
     }
-    addEvent(eventState){
-        console.log(eventState)
+
+    addEvent = (eventState) => {
+        this.setState({
+            dateParts: [...this.state.dateParts, eventState]
+        })
     }
-    addVenue(venueState){
+
+    addVenue = (venueState) => {
         this.setState({
             dateParts: [...this.state.dateParts, venueState]
         })
-        console.log(this.state.dateParts)
+    
     }
+
+    removePart = (name) => {
+        this.setState({
+            dateParts: this.state.dateParts.filter(part => part.name !== name)
+        })
+    }
+
+
     render() { 
-        console.log(this.state.dateParts)
         return ( 
             <div className="eventsvenues-box">
                 Event Venues
                 <Scheduler dateParts={this.state.dateParts}></Scheduler>
-                <SuggestedEvents addEvent={this.addEvent}></SuggestedEvents>
-                <SuggestedVenues addVenue={this.addVenue}></SuggestedVenues>
+                <SuggestedEvents addEvent={this.addEvent} removePart={this.removePart}></SuggestedEvents>
+                <SuggestedVenues addVenue={this.addVenue} removePart={this.removePart}></SuggestedVenues>
             </div>
           
         )

@@ -12,6 +12,7 @@ class Venue extends Component {
     }
     render() { 
         const {addVenue} = this.props
+        const {removePart} = this.props
         const {city, name, price, type} = this.state
         return (   
         <div  className="venue">
@@ -22,6 +23,9 @@ class Venue extends Component {
         <li>{type}</li>
         </ul>
         <button onClick = {() => addVenue(this.state)}>+</button>
+        <button onClick= {() => removePart(name)}>
+            -
+        </button>
     </div> 
     );
     }

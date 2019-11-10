@@ -4,4 +4,6 @@
     position: relative;
     top: 150px;
     width: 80%;
+    display: flex;
+    flex-flow: row nowrap;
 }

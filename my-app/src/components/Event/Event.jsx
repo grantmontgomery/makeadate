@@ -8,24 +8,30 @@ class Event extends Component {
         this.state={
             city: this.props.city,
             time: this.props.time,
-            title: this.props.title,
-            type: this.props.type
+            name: this.props.name,
+            type: this.props.type,
+            price: this.props.price
         }
     }
     render() { 
-        const {city, time, title, type} = this.state
+        const {city, time, name, type, price} = this.state
         const {addEvent} = this.props
+        const {removePart} = this.props
         return ( 
             <div  className="event">
                 <ul>
-                <li>{title}</li>
+                <li>{name}</li>
                 <li>{city}</li>
                 <li>{time}</li>
                 <li>{type}</li>
+                <li>{price}</li>
                 </ul>
                 <br/>
                 <button onClick={() => addEvent(this.state)}>
                     +
+                </button>
+                <button onClick={() => removePart(name)}>
+                    -
                 </button>
             </div>
          );
