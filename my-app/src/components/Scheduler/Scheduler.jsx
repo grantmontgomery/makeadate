@@ -12,7 +12,9 @@ class Scheduler extends Component {
         return ( 
             <div className="scheduler">
                 Scheduler
-                
+                <div className="notification-icon">
+                {this.props.dateParts.length}
+                </div>
             </div>
          );
     }

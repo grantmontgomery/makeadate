@@ -13,6 +13,14 @@ class Event extends Component {
             price: this.props.price
         }
     }
+
+    // addOrRemove = () => {
+    //     if(this.addEvent){
+    //         addevent(this.state){
+                
+    //     }
+    // }
+
     render() { 
         const {city, time, name, type, price} = this.state
         const {addEvent} = this.props

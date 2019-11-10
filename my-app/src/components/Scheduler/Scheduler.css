@@ -5,3 +5,10 @@
     right: 5%;
     width: 100px;
 }
+
+.notification-icon{
+    border-radius: 4px;
+    background: red;
+    color: white;
+    width: fit-content
+}
