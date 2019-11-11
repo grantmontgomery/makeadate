@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "./Scheduler.css"
 import "./Scheuduler1.svg"
+import { EventsVenuesContext } from '../EventsVenues/Context';
 
 
 class Scheduler extends Component {
@@ -11,14 +12,15 @@ class Scheduler extends Component {
 
     render() {
         return ( 
-            <Consumer>
-              {value => <div className="scheduler">
-                Scheduler
-                {value.dateParts}
-                <div className="notification-icon">
-                </div>
-                </div>}
-            </Consumer>
+
+            <EventsVenuesContext.Consumer>
+                  <div className="scheduler">
+                    
+                    </div>
+
+
+            </EventsVenuesContext.Consumer>
+            
           
          );
     }

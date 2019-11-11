@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import {Scheduler} from "../Scheduler"
 import {SuggestedEvents} from "../SuggestedEvents"
 import {SuggestedVenues} from "../SuggestedVenues"
+import {EventsVenuesContext} from "./Context.jsx"
 import "./EventsVenues.css"
 
+
+const {Provider, Consumer} = React.createContext()
 class EventsVenues extends Component {
     constructor(props){
         super(props)
@@ -22,7 +25,7 @@ class EventsVenues extends Component {
     addVenue = (venueState) => {
         this.setState({
             dateParts: [...this.state.dateParts, venueState]
-        })
+        }) 
     
     }
 
@@ -34,18 +37,19 @@ class EventsVenues extends Component {
 
 
     render() { 
-        const {Provider, Consumer} = React.createContext()
+
         return ( 
+            
+            <EventsVenuesContext.Provider value={this.state.dateParts}>
             <div className="eventsvenues-box">
-                <Provider value={this.state.dateParts}>
                 <Scheduler></Scheduler>
                 <SuggestedEvents></SuggestedEvents>
                 <SuggestedVenues></SuggestedVenues>
-                </Provider>
             </div>
+            </EventsVenuesContext.Provider>
           
         )
     }
 }
- 
+
 export default EventsVenues;
