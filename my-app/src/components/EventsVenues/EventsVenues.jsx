@@ -6,7 +6,7 @@ import {EventsVenuesContext} from "./Context.jsx"
 import "./EventsVenues.css"
 
 
-const {Provider, Consumer} = React.createContext()
+
 class EventsVenues extends Component {
     constructor(props){
         super(props)

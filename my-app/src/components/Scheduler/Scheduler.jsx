@@ -12,18 +12,17 @@ class Scheduler extends Component {
 
     render() {
         return ( 
-
             <EventsVenuesContext.Consumer>
-                  <div className="scheduler">
-                    
-                    </div>
-
-
+                {value => 
+                <div className="scheduler">
+                    {value.length}
+                </div>
+                }
             </EventsVenuesContext.Consumer>
-            
-          
          );
     }
 }
- 
+
+
+
 export default Scheduler;
