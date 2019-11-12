@@ -11,9 +11,11 @@ class EventsVenues extends Component {
     constructor(props){
         super(props)
         this.state={
-            dateParts: []
+            dateParts: [],
+            addEvent: this.addEvent,
+            addVenue: this.addVenue,
+            removePart: this.removePart
         }
-
     }
 
     addEvent = (eventState) => {
@@ -40,7 +42,7 @@ class EventsVenues extends Component {
 
         return ( 
             
-            <EventsVenuesContext.Provider value={this.state.dateParts}>
+            <EventsVenuesContext.Provider value={this.state}>
             <div className="eventsvenues-box">
                 <Scheduler></Scheduler>
                 <SuggestedEvents></SuggestedEvents>

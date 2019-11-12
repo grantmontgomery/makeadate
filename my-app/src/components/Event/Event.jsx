@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "./Event.css"
 import { type } from 'os';
+import { EventsVenuesContext } from '../EventsVenues/Context';
 
 class Event extends Component {
     constructor(props){
@@ -23,25 +24,29 @@ class Event extends Component {
 
     render() { 
         const {city, time, name, type, price} = this.state
-        const {addEvent} = this.props
-        const {removePart} = this.props
         return ( 
-            <div  className="event">
-                <ul>
-                <li>{name}</li>
-                <li>{city}</li>
-                <li>{time}</li>
-                <li>{type}</li>
-                <li>{price}</li>
-                </ul>
-                <br/>
-                <button onClick={() => addEvent(this.state)}>
-                    +
-                </button>
-                <button onClick={() => removePart(name)}>
-                    -
-                </button>
-            </div>
+            <EventsVenuesContext.Consumer>
+                {value =>
+                    <div  className="event">
+                    <ul>
+                    <li>{name}</li>
+                    <li>{city}</li>
+                    <li>{time}</li>
+                    <li>{type}</li>
+                    <li>{price}</li>
+                    </ul>
+                    <br/>
+                    <button onClick={() => value.addEvent(this.state)}>
+                        +
+                    </button>
+                    <button onClick={() => value.removePart(name)}>
+                        -
+                    </button>
+                </div>
+
+                }
+            </EventsVenuesContext.Consumer>
+            
          );
     }
 }

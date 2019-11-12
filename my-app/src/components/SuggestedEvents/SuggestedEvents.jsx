@@ -14,17 +14,15 @@ class SuggestedEvents extends Component {
             name: "Concert in the park",
             city: "Los Angeles",
             time: "12:00",
-            price: "free",
-            addEvent: this.props.addEvent,
-            removePart: this.props.removePart},
+            price: "free"
+            },
             {id: 2,
             type: "event",
             name: "Japanese sushi festival",
             city: "Los Angeles",
             time: "8:00 p.m",
-            price: "$30",
-            addEvent: this.props.addEvent,
-            removePart: this.props.removePart}
+            price: "$30"
+            }
             ]
         }
     }
@@ -34,12 +32,11 @@ class SuggestedEvents extends Component {
             <div className="suggested-events">
                 Suggested Events
                 {events.map(event =>{
-                    const{name, city, time, id, type, price, removePart, addEvent} = event
+                    const{name, city, time, id, type, price} = event
                     return (
                     <Event key={id} id={id} 
                     type={type} name={name} 
                     time={time} price={price} 
-                    removePart={removePart} addEvent={addEvent}
                     city={city}>
 
                     </Event>

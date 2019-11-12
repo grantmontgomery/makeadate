@@ -15,7 +15,7 @@ class Scheduler extends Component {
             <EventsVenuesContext.Consumer>
                 {value => 
                 <div className="scheduler">
-                    {value.length}
+                    {value.dateParts.length}
                 </div>
                 }
             </EventsVenuesContext.Consumer>
