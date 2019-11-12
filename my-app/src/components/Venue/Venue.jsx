@@ -8,8 +8,7 @@ class Venue extends Component {
             city: this.props.city,
             name: this.props.name,
             price: this.props.price,
-            type: this.props.type,
-            AddRemove: "+"
+            type: this.props.type
         }
     }
 
@@ -24,25 +23,25 @@ class Venue extends Component {
     //     }
     // }
 
-    addOrRemove=(addfunction, removefunction, things) => {
-        if(this.state.AddRemove === "+"){
-            this.setState({AddRemove: "-"})
-            return (
-                <button onClick={() => removefunction(things)}>
-                    {this.state.AddRemove}
-                </button>
-            )
+    // addOrRemove=(addfunction, removefunction, things) => {
+    //     if(this.state.AddRemove === "+"){
+    //         this.setState({AddRemove: "-"})
+    //         return (
+    //             <button onClick={() => removefunction(things)}>
+    //                 {this.state.AddRemove}
+    //             </button>
+    //         )
             
-        }
-        else{
-            this.setState({AddRemove: "+"})
-            return (
-                <button onClick={() => addfunction(things)}>
-                    {this.state.AddRemove}
-                </button>
-            )
-        }
-    }
+    //     }
+    //     else{
+    //         this.setState({AddRemove: "+"})
+    //         return (
+    //             <button onClick={() => addfunction(things)}>
+    //                 {this.state.AddRemove}
+    //             </button>
+    //         )
+    //     }
+    // }
 
     render() { 
         const {city, name, price, type} = this.state
@@ -56,7 +55,12 @@ class Venue extends Component {
                 <li>{price}</li>
                 <li>{type}</li>
                 </ul>
-                {this.addOrRemove(value.addVenue, value.removePart, this.state)}
+                <button onClick={() => value.addVenue(this.state)}>
+                    +
+                </button>
+                <button onClick={() => value.removePart(name)}> 
+                    -
+                </button>
             </div> 
             
             }
