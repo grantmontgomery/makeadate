@@ -12,31 +12,40 @@ class EventsVenues extends Component {
         super(props)
         this.state={
             dateParts: [],
-            addEvent: this.addEvent,
-            addVenue: this.addVenue,
-            removePart: this.removePart
+            add_remove: this.add_remove
+            // addEvent: this.addEvent,
+            // addVenue: this.addVenue,
+            // removePart: this.removePart
         }
     }
 
-    addEvent = (eventState) => {
-        this.setState({
-            dateParts: [...this.state.dateParts, eventState]
-        })
-    }
+    // addEvent = (eventState) => {
+    //     this.setState({
+    //         dateParts: [...this.state.dateParts, eventState]
+    //     })
+    // }
 
-    addVenue = (venueState) => {
-        this.setState({
-            dateParts: [...this.state.dateParts, venueState]
-        }) 
+    // addVenue = (venueState) => {
+    //     this.setState({
+    //         dateParts: [...this.state.dateParts, venueState]
+    //     }) 
     
-    }
+    // }
 
-    removePart = (name) => {
-        this.setState({
-            dateParts: this.state.dateParts.filter(part => part.name !== name)
-        })
+    // removePart = (name) => {
+    //     this.setState({
+    //         dateParts: this.state.dateParts.filter(part => part.name !== name)
+    //     })
+    // }
+    
+    add_remove = (partstate) => {
+        if(this.state.dateParts.includes(partstate) === false){
+            this.setState({dateParts: [...this.state.dateParts, partstate]})
+        }
+        else{
+            this.setState({dateParts: this.state.dateParts.filter(part => part !== partstate)})
+        }
     }
-
 
     render() { 
         console.log(this.state.dateParts)

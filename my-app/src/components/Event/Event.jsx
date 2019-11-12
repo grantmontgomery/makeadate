@@ -14,12 +14,6 @@ class Event extends Component {
         }
     }
 
-    // addOrRemove = () => {
-    //     if(this.addEvent){
-    //         addevent(this.state){
-                
-    //     }
-    // }
 
     render() { 
         const {city, time, name, type, price} = this.state
@@ -35,11 +29,8 @@ class Event extends Component {
                     <li>{price}</li>
                     </ul>
                     <br/>
-                    <button onClick={() => value.addEvent(this.state)}>
+                    <button onClick={() => value.add_remove(this.state)}>
                         +
-                    </button>
-                    <button onClick={() => value.removePart(name)}>
-                        -
                     </button>
                 </div>
 
