@@ -13,23 +13,24 @@ class Event extends Component {
             name: this.props.name,
             type: this.props.type,
             price: this.props.price,
-            AddRemove: "+"
+            AddRemove: "+",
+            buttonSwitch: "add"
         }
     }
 
     changeButton = (addfunction, removefunction) => {
         if(this.state.AddRemove === "+"){
             addfunction(this.state)
-            this.setState({AddRemove: "-"})
+            this.setState({AddRemove: "-", buttonSwitch: "remove"})
         }
         else{
             removefunction(this.state.name)
-            this.setState({AddRemove: "+"})
+            this.setState({AddRemove: "+", buttonSwitch: "add"})
         }
     }
 
     render() { 
-        const {city, time, name, type, price} = this.state
+        const {city, time, name, type, price, buttonSwitch} = this.state
         return ( 
             <EventsVenuesContext.Consumer>
                 {value =>
@@ -42,7 +43,7 @@ class Event extends Component {
                     <li>{price}</li>
                     </ul>
                     <br/>
-                    <button onClick={() => this.changeButton(value.addPart, value.removePart)}>
+                    <button className={buttonSwitch} onClick={() => this.changeButton(value.addPart, value.removePart)}>
                         {this.state.AddRemove}
                     </button>
                     {/* {this.changeButton(value.add_remove)} */}
