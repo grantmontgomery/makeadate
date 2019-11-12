@@ -39,12 +39,11 @@ class EventsVenues extends Component {
 
 
     render() { 
-
+        console.log(this.state.dateParts)
         return ( 
-            
             <EventsVenuesContext.Provider value={this.state}>
             <div className="eventsvenues-box">
-                <Scheduler></Scheduler>
+                <Scheduler dateParts={this.state.dateParts}></Scheduler>
                 <SuggestedEvents></SuggestedEvents>
                 <SuggestedVenues></SuggestedVenues>
             </div>

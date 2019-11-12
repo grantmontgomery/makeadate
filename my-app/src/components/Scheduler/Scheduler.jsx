@@ -1,28 +1,28 @@
 import React, { Component } from 'react';
 import "./Scheduler.css"
 import "./Scheuduler1.svg"
-import { EventsVenuesContext } from '../EventsVenues/Context';
 
 
 class Scheduler extends Component {
     constructor(props){
         super(props)
+        this.state={
+            dateParts: this.props.dateParts
+        }
     }
 
 
     render() {
-        return ( 
-            <EventsVenuesContext.Consumer>
-                {value => 
-                <div className="scheduler">
-                    {value.dateParts.length}
+        console.log(this.props.dateParts)
+        return (
+            <div className="scheduler">
+                Scheduler
+                <div className="notification-icon">
+                    {this.props.dateParts.length}
                 </div>
-                }
-            </EventsVenuesContext.Consumer>
+            </div>
          );
     }
 }
-
-
-
+ 
 export default Scheduler;
