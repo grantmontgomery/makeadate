@@ -10,10 +10,22 @@ class Event extends Component {
             time: this.props.time,
             name: this.props.name,
             type: this.props.type,
-            price: this.props.price
+            price: this.props.price,
+            AddRemove: "+"
         }
     }
 
+    changeButton = (addremovefunction) => {
+        addremovefunction(this.state)
+        if(this.state.AddRemove === "+"){
+            // addremovefunction(this.state)
+            this.setState({AddRemove: "-"})
+        }
+        else{
+            // addremovefunction(this.state)
+            this.setState({AddRemove: "+"})
+        }
+    }
 
     render() { 
         const {city, time, name, type, price} = this.state
@@ -29,9 +41,10 @@ class Event extends Component {
                     <li>{price}</li>
                     </ul>
                     <br/>
-                    <button onClick={() => value.add_remove(this.state)}>
-                        +
+                    <button onClick={() => this.changeButton(value.add_remove)}>
+                        {this.state.AddRemove}
                     </button>
+                    {/* {this.changeButton(value.add_remove)} */}
                 </div>
 
                 }
