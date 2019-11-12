@@ -13,48 +13,17 @@ class Venue extends Component {
         }
     }
 
-    // addOrRemove=(addfunction, removefunction) => {
-    //     if(this.state.AddRemove === "+"){
-    //         addfunction()
-    //         this.setState({AddRemove: "-"})
-    //     }
-    //     else{
-    //         removefunction()
-    //         this.setState({AddRemove: "+"})
-    //     }
-    // }
-
-    // addOrRemove=(addfunction, removefunction, things) => {
-    //     if(this.state.AddRemove === "+"){
-    //         this.setState({AddRemove: "-"})
-    //         return (
-    //             <button onClick={() => removefunction(things)}>
-    //                 {this.state.AddRemove}
-    //             </button>
-    //         )
-            
-    //     }
-    //     else{
-    //         this.setState({AddRemove: "+"})
-    //         return (
-    //             <button onClick={() => addfunction(things)}>
-    //                 {this.state.AddRemove}
-    //             </button>
-    //         )
-    //     }
-    // }
-
-    changeButton = () => {
+    changeButton = (addfunction, removefunction) => {
         if(this.state.AddRemove === "+"){
+            addfunction(this.state)
             this.setState({AddRemove: "-"})
-            return this.state.AddRemove
         }
         else{
+            removefunction(this.state.name)
             this.setState({AddRemove: "+"})
-            return this.state.AddRemove
         }
-
     }
+
 
     render() { 
         const {city, name, price, type} = this.state
@@ -68,8 +37,8 @@ class Venue extends Component {
                 <li>{price}</li>
                 <li>{type}</li>
                 </ul>
-                <button onClick={() => value.add_remove(this.state)}>
-                    +
+                <button onClick={() => this.changeButton(value.addPart, value.removePart)}>
+                    {this.state.AddRemove}
                 </button>
             </div> 
             

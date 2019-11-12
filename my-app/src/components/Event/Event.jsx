@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import "./Event.css"
 import { EventsVenuesContext } from '../EventsVenues/Context';
 
+
+
 class Event extends Component {
     constructor(props){
         super(props)
@@ -15,14 +17,13 @@ class Event extends Component {
         }
     }
 
-    changeButton = (addremovefunction) => {
-        addremovefunction(this.state)
+    changeButton = (addfunction, removefunction) => {
         if(this.state.AddRemove === "+"){
-            // addremovefunction(this.state)
+            addfunction(this.state)
             this.setState({AddRemove: "-"})
         }
         else{
-            // addremovefunction(this.state)
+            removefunction(this.state.name)
             this.setState({AddRemove: "+"})
         }
     }
@@ -41,7 +42,7 @@ class Event extends Component {
                     <li>{price}</li>
                     </ul>
                     <br/>
-                    <button onClick={() => this.changeButton(value.add_remove)}>
+                    <button onClick={() => this.changeButton(value.addPart, value.removePart)}>
                         {this.state.AddRemove}
                     </button>
                     {/* {this.changeButton(value.add_remove)} */}
