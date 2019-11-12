@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import "./Event.css"
-import { type } from 'os';
 import { EventsVenuesContext } from '../EventsVenues/Context';
 
 class Event extends Component {
