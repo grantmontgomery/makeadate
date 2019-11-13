@@ -5,7 +5,7 @@ import {Header} from "./components"
 import {EventsVenues} from "./components"
 import {Footer} from './components';
 import "./index.css"
-
+require("dotenv").config()
 
 
 
@@ -13,17 +13,27 @@ class App extends Component {
     constructor(props){
         super(props)
         this.state={
-            lat: null,
-            long: null,
-            errorMessage: ""
+            errorMessage: "",
+            city:""
         }
     }
+
+
+    OpenCage = (lat, long) => {
+        const coords = `${lat}%2C+${long}`
+        fetch(`https://api.opencagedata.com/geocode/v1/json?q=${coords}&key=${process.env.REACT_APP_OPENCAGE_API_KEY}`)
+        .then(response => response.json())
+        .then(data => this.setState({city: data.results[0].components.city}))
+        .catch(error => console.log(error.message))
+        
+    }
+    
+
     componentDidMount(){
         window.navigator.geolocation.getCurrentPosition(
-            position => this.setState({lat: position.coords.latitude,
-            long: position.coords.longitude}),
+            position => this.OpenCage(position.coords.latitude, position.coords.longitude),
             error => this.setState({errorMessage: error.message})
-        )
+        ) 
     }
 
 
