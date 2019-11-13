@@ -13,7 +13,6 @@ class City extends Component {
                     <div className="city-box">
                         {value.city}
                     </div>
-                
                 }
             </AppContext.Consumer>
           );

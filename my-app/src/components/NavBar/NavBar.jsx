@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {City} from "../City"
 import {Login} from "../Login"
+import {AppContext} from "../../AppContext"
 import "./NavBar.css"
 
 class NavBar extends Component {
@@ -19,13 +20,29 @@ class NavBar extends Component {
     }
     render() { 
         return (
-            <React.Fragment>
-                <nav style={this.styles}>
-                    <a href=""className="logo">make a date</a>
-                    <City></City>
-                    <Login></Login>
-                </nav>
-            </React.Fragment>
+            <AppContext.Consumer>
+                {
+                    value => {
+                        if(value.errorMessage !== ""){
+                            return(
+                                <nav style={this.styles}>
+                                <a href=""className="logo">make a date</a>
+                                <Login></Login>
+                             </nav>
+                            )
+                        }
+                        else{
+                            return(
+                                <nav style={this.styles}>
+                                <a href=""className="logo">make a date</a>
+                                <City></City>
+                                <Login></Login>
+                            </nav>
+                            )
+                        }
+                    }
+                }
+            </AppContext.Consumer>
           );
     }
 }
