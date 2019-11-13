@@ -42,7 +42,6 @@ class App extends Component {
         bacgkroundSize: '100% auto'
     }
     render() { 
-        console.log(this.state)
         return (
             <AppContext.Provider value={this.state}>
                    <div className="background_image" ref={this.backgroundRef}>

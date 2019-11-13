@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {AppContext} from "../../AppContext"
 import "./City.css"
 
 
@@ -7,9 +8,14 @@ class City extends Component {
     state = {  }
     render() { 
         return (
-            <div className="city-box">
-                City(LA)
-            </div>
+            <AppContext.Consumer>
+                {value =>
+                    <div className="city-box">
+                        {value.city}
+                    </div>
+                
+                }
+            </AppContext.Consumer>
           );
     }
 }
