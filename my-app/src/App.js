@@ -11,23 +11,27 @@ import "./index.css"
 class App extends Component {
     constructor(props){
         super(props)
-        this.backgroundRef = React.createRef()
-        this.state = {backgroundsize: 0}
+        this.state={
+            lat: null,
+            long: null,
+            errorMessage: ""
+        }
     }
     componentDidMount(){
-        this.backgroundRef.current.addEventListener("load", this.giveClientHeight())
-        console.log(this.backgroundRef)
+        window.navigator.geolocation.getCurrentPosition(
+            position => this.setState({lat: position.coords.latitude,
+            long: position.coords.longitude}),
+            error => this.setState({errorMessage: error.message})
+        )
     }
 
-    giveClientHeight = () => {
-        console.log(this.backgroundRef.current.ClientHeight)
-    }
 
     styles = {
         backgroundImage: "url('./components/pictures/coupleondate4.jpg')",
         bacgkroundSize: '100% auto'
     }
     render() { 
+        console.log(this.state)
         return (
                 <div className="background_image" ref={this.backgroundRef}>
                 <NavBar>
