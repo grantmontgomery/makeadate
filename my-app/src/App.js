@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {AppContext} from "./AppContext"
 import {NavBar} from "./components"
 import {Header} from "./components"
 import {EventsVenues} from "./components"
@@ -33,7 +34,8 @@ class App extends Component {
     render() { 
         console.log(this.state)
         return (
-                <div className="background_image" ref={this.backgroundRef}>
+            <AppContext.Provider value={this.state}>
+                   <div className="background_image" ref={this.backgroundRef}>
                 <NavBar>
                 </NavBar>
 
@@ -43,10 +45,7 @@ class App extends Component {
               <EventsVenues></EventsVenues>
               <Footer></Footer>
                 </div>
-                
-                
-                
-
+            </AppContext.Provider>
 
          );
     }

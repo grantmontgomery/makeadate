@@ -4,7 +4,7 @@ const response = fetch(`https://api.opencagedata.com/geocode/v1/json?q=${latlong
     withCredentials: true,
     credentials: "include",
     headers: {
-    Authentication: "dce6d22b4b2f47c0b09b32ec40610a64 "
+    Authentication: "dce6d22b4b2f47c0b09b32ec40610a64"
 }
 })
 
